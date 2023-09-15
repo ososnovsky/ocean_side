@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
-import { differenceInCalendarDays } from "date-fns";
+import { differenceInCalendarDays, format, addDays } from "date-fns";
 
 
 export default function BookingWidget({ place }) {
@@ -19,6 +18,18 @@ export default function BookingWidget({ place }) {
   if (checkIn && checkOut) {
     numberOfNights = differenceInCalendarDays(new Date(checkOut), new Date(checkIn));
   }
+
+  // Function to handle "Check-in" date change
+  const handleCheckInChange = (ev) => {
+    const newCheckIn = ev.target.value;
+    setCheckIn(newCheckIn);
+
+    // Calculate the next day and set it as the "Check-out" date
+    if (newCheckIn) {
+      const nextDay = addDays(new Date(newCheckIn), 1);
+      setCheckOut(format(nextDay, "yyyy-MM-dd"));
+    }
+  };
 
   const handleBookingRequest = () => {
     if (email) {
@@ -49,7 +60,9 @@ export default function BookingWidget({ place }) {
                 type="date"
                 className="form-control"
                 value={checkIn}
-                onChange={(ev) => setCheckIn(ev.target.value)}
+                // onChange={(ev) => setCheckIn(ev.target.value)}
+                min={new Date().toISOString().split('T')[0]} // Set the minimum date to today
+                onChange={handleCheckInChange}
               />
             </div>
           </div>
@@ -60,6 +73,7 @@ export default function BookingWidget({ place }) {
                 type="date"
                 className="form-control"
                 value={checkOut}
+                min={new Date().toISOString().split('T')[0]} // Set the minimum date to today
                 onChange={(ev) => setCheckOut(ev.target.value)}
               />
             </div>
