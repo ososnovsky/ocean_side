@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
 import { differenceInCalendarDays } from "date-fns";
 
 
@@ -26,11 +27,17 @@ export default function BookingWidget({ place }) {
       const message = `Check-in: ${checkIn}\nCheck-out: ${checkOut}\nNumber of guests: ${numberOfGuests}\nName: ${name}\nPhone: ${phone}`;
       const mailtoLink = `mailto:${emailRecipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
       window.location.href = mailtoLink;
+      alert("Please send email from your email app now");
+      setRedirect('/');
     } else {
       // If email is not provided
       alert("Email address is necessary");
     }
   };
+
+  if (redirect) {
+    return <Navigate to={redirect} />
+  }
 
   return (
     <div className="bg-white shadow p-3 rounded mt-5 mb-2">
