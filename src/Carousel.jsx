@@ -3,13 +3,13 @@ export default function Carousel() {
         <div id="carouselExampleAutoplaying" className="carousel slide shadow rounded mb-2" data-bs-ride="carousel">
             <div className="carousel-inner rounded">
                 <div className="carousel-item active">
-                    <img src="./src/images/photo1.jpg" className="d-block w-100" alt="..." />
+                    <img src="./assets/photo1-3de207ca.jpg" className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
-                    <img src="./src/images/photo2.jpg" className="d-block w-100" alt="..." />
+                    <img src="./assets/photo2-ba7fa2eb.jpg" className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
-                    <img src="./src/images/photo15.jpeg" className="d-block w-100" alt="..." />
+                    <img src="./assets/photo15-0bfa798e.jpeg" className="d-block w-100" alt="..." />
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
