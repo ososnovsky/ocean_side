@@ -12,7 +12,7 @@ export default function BookingWidget({ place }) {
   const [redirect, setRedirect] = useState('');
 
   const price = 50;
-  const emailRecipient = 'ocean.side.app@outlook.com';
+  const emailRecipient = 'ocean.side.praia@outlook.com';
 
   let numberOfNights = 0;
   if (checkIn && checkOut) {
