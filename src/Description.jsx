@@ -6,7 +6,7 @@ export default function Description() {
             <MapLink />
             <h1>Description</h1>
             <p>
-                This lowely apartment is located at Club Amarilis condominium just few minutes walking distance from the beach of Praia da Rocha. The apartment is 60m² and includes a living room with a sofa bed and a cable TV, a bedroom with queen size bed, a fully equipped kitchen with a fridge, a microwave and an electric kettle, a bathroom, and a balcony.
+                This lovely apartment is located at Club Amarilis condominium just few minutes walking distance from the beach of Praia da Rocha. The apartment is 60m² and includes a living room with a sofa bed and a cable TV, a bedroom with queen size bed, a fully equipped kitchen with a fridge, a microwave and an electric kettle, a bathroom, and a balcony.
             </p>
             <p>
                 Large outdoor pool with sun-lounger terrace, an indoor heated pool with sauna and a Turkish bath, a tennis court, available on request, subject to availability and for a surcharge. Car and bicycle rental services are available as well.
