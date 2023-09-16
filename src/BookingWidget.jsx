@@ -51,8 +51,8 @@ export default function BookingWidget({ place }) {
       <div className="border rounded-2xl">
         <div className="row">
           <div className="col-md-4 text-2xl text-center mt-3">
-            <h4>Price: €{price} per night</h4>
-            <p>Price is indicative and depends on season and length of stay. Final price is available on request</p>
+            <h5>Price: €{price} per night</h5>
+            <p>Available for both short and long stay. Price is indicative. Final price and availability is advised upon request.</p>
           </div>
           <div className="col-md-4">
             <div className="py-2 px-4">
