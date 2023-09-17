@@ -2,14 +2,14 @@ import { useState } from "react";
 import { differenceInCalendarDays, format, addDays } from "date-fns";
 
 
-export default function BookingWidget({ place }) {
+export default function BookingWidget() {
   const [checkIn, setCheckIn] = useState('');
   const [checkOut, setCheckOut] = useState('');
   const [numberOfGuests, setNumberOfGuests] = useState(1);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
-  const [redirect, setRedirect] = useState('');
+  // const [redirect, setRedirect] = useState('');
 
   const price = 50;
   const emailRecipient = 'ocean.side.praia@outlook.com';
@@ -52,7 +52,7 @@ export default function BookingWidget({ place }) {
         <div className="row">
           <div className="col-md-4 text-2xl text-center mt-3">
             <h5>Price: €{price} per night</h5>
-            <p>Available for both short and long stay. Price is indicative. Final price and availability is advised upon request.</p>
+            <p>Available for both short and long stay. The price varies depending on type of stay and the season. Confirmation is upon request.</p>
           </div>
           <div className="col-md-4">
             <div className="py-2 px-4">
