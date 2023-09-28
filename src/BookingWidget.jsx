@@ -8,8 +8,8 @@ export default function BookingWidget() {
   const [numberOfGuests, setNumberOfGuests] = useState(1);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  // const [redirect, setRedirect] = useState('');
+  // const [email, setEmail] = useState('');
+
 
   const price = 50;
   const emailRecipient = 'ocean.side.praia@outlook.com';
@@ -32,7 +32,7 @@ export default function BookingWidget() {
   };
 
   const handleBookingRequest = () => {
-    if (email) {
+    if (name) {
       // If email is provided, open the user's email app with prepopulated content
       const subject = `Booking Request for Ocean Side`;
       const message = `Check-in: ${checkIn}\nCheck-out: ${checkOut}\nNumber of guests: ${numberOfGuests}\nName: ${name}\nPhone: ${phone}`;
@@ -40,8 +40,10 @@ export default function BookingWidget() {
       window.location.href = mailtoLink;
     } else {
       // If email is not provided
-      alert("Email address is necessary");
+      alert("Your name is necessary");
     }
+    setCheckIn('');
+    setCheckOut('');
   };
 
   return (
@@ -91,7 +93,7 @@ export default function BookingWidget() {
               value={numberOfGuests}
               onChange={(ev) => setNumberOfGuests(ev.target.value)}
             />
-            <label>Your full name:</label>
+            <label>Your name:</label>
             <input type="text"
               className="form-control"
               value={name}
@@ -101,11 +103,11 @@ export default function BookingWidget() {
               className="form-control"
               value={phone}
               onChange={ev => setPhone(ev.target.value)} />
-            <label>Your email:</label>
-            <input type="email"
+            {/* <label>Your email:</label> */}
+            {/* <input type="email"
               className="form-control"
               value={email}
-              onChange={ev => setEmail(ev.target.value)} />
+              onChange={ev => setEmail(ev.target.value)} /> */}
             <button className="btn btn-primary mt-4" onClick={handleBookingRequest}>
               Request booking for
               {numberOfNights > 0 && (
