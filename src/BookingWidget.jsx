@@ -11,7 +11,7 @@ export default function BookingWidget() {
   // const [email, setEmail] = useState('');
 
 
-  const price = 50;
+  const price = 25;
   const emailRecipient = 'ocean.side.praia@outlook.com';
 
   let numberOfNights = 0;
@@ -53,8 +53,8 @@ export default function BookingWidget() {
       <div className="border rounded-2xl">
         <div className="row">
           <div className="col-md-4 text-2xl text-center mt-3">
-            <h5>Price: €{price} per night</h5>
-            <p>Available for both short and long stay. The price varies depending on type of stay and the season. Confirmation is upon request.</p>
+            <h5>Price: from €{price} per night</h5>
+            <p>Available for both short and long stay. The price varies depending on the type of stay and the season. Confirmation is upon request.</p>
           </div>
           <div className="col-md-4">
             <div className="py-2 px-4">
@@ -111,7 +111,7 @@ export default function BookingWidget() {
             <button className="btn btn-primary mt-4" onClick={handleBookingRequest}>
               Request booking for
               {numberOfNights > 0 && (
-                <span> €{numberOfNights * price}</span>
+                <span> {numberOfNights} nights</span>
               )}
             </button>
           </div>
