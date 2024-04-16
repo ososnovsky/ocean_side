@@ -1,9 +1,12 @@
+import praia from './images/praia.jpg';
+
 export default function Carousel() {
     return (
         <div id="carouselExampleAutoplaying" className="carousel slide shadow rounded mb-2" data-bs-ride="carousel">
             <div className="carousel-inner rounded">
                 <div className="carousel-item active">
-                    <img src="./assets/photo1-3de207ca.jpg" className="d-block w-100" alt="..." />
+                    {/* <img src="./assets/photo1-3de207ca.jpg" className="d-block w-100" alt="..." /> */}
+                    <img src={praia} className="d-block w-100" alt="praia-da-rocha" />
                 </div>
                 <div className="carousel-item">
                     <img src="./assets/photo2-ba7fa2eb.jpg" className="d-block w-100" alt="..." />
